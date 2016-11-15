@@ -122,8 +122,7 @@ public class Chatbot
         else if (findKeyword(statement, "How do I get to", 0) >= 0)
         {
             response = transformGetToStatement(statement);
-        }
-            8
+        )
         else if (findKeyword(statement, "Can I", 0) >= 0)
         {
             int psn = findKeyword(statement, "Can I", 0);
