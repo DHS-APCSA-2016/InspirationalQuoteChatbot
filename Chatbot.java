@@ -44,7 +44,7 @@ public class Chatbot
         in.add(new String[] {"believe"});
         out.add("I believe in pink. I believe that laughing is the best calorie burner. I believe in kissing, kissing a lot. I believe in being strong when everything seems to be going wrong. I believe that happy girls are the prettiest girls. I believe that tomorrow is another day and I believe in miracles. ");
         in.add(new String[] {"help"});
-        out.add("We can't help everyone, but evI caneryone can help someone.");
+        out.add("We can't help everyone, but anyone can help someone.");
         in.add(new String[] {"change"});
         out.add("Let us remember: One book, one pen, one child, and one teacher can change the world.");
         in.add(new String[] {"life"});
