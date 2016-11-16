@@ -1,7 +1,19 @@
 import java.util.Scanner;
 public class Runner
 {
-
+	
+	public static void printStatement(String s){
+        	for(int i = 0; i < s.length(); i++){
+				System.out.print(s.substring(i, i+1));
+				try {
+					Thread.sleep(80);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+		}
+		System.out.println("");
+    	}
+	
 	/**
 	 * Create a Magpie, give it user input, and print its replies.
 	 */
@@ -9,21 +21,14 @@ public class Runner
 	{
 		Chatbot chatbot = new Chatbot();
 		
-		System.out.println (chatbot.getGreeting());
+		printStatement(chatbot.getGreeting());
 		Scanner in = new Scanner (System.in);
 		String statement = in.nextLine();
 		
 		while (!statement.equals("Bye"))
 		{
 			String response = chatbot.getResponse(statement);
-			for(int i = 0; i < response.length(); i++){
-				System.out.print(response.substring(i, i+1));
-				try {
-					Thread.sleep(80);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}	
+			printStatement(response);	
 		
 			statement = in.nextLine();
 		}
