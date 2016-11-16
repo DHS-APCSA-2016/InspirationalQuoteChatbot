@@ -7,7 +7,7 @@ public class Chatbot
      */ 
     public String getGreeting()
     {
-        return "Hello, let's talk.";
+        return "Hello, let's talk and share our feelings.";
     }
     
     /**
