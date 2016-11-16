@@ -25,7 +25,7 @@ public class Runner
 		Scanner in = new Scanner (System.in);
 		String statement = in.nextLine();
 		
-		while (!statement.equals("Bye"))
+		while (!statement.equals("Bye") || !statement.equals("Goodbye"))
 		{
 			String response = chatbot.getResponse(statement);
 			printStatement(response);	
