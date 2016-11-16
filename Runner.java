@@ -15,7 +15,16 @@ public class Runner
 		
 		while (!statement.equals("Bye"))
 		{
-			System.out.println (chatbot.getResponse(statement));
+			String response = chatbot.getResponse(statement);
+			for(int i = 0; i < response.length(); i++){
+				System.out.print(response.substring(i, i+1));
+				try {
+					Thread.sleep(80);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}	
+		
 			statement = in.nextLine();
 		}
 	}
