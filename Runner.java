@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Runner
 {
-	
+	// unique to our chatbot (4aiv)
 	public static void printStatement(String s){
         	for(int i = 0; i < s.length(); i++){
 				System.out.print(s.substring(i, i+1));
