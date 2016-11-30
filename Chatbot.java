@@ -23,6 +23,7 @@ public class Chatbot
         ArrayList<String[]> in = new ArrayList<String[]>();
         ArrayList<String> out = new ArrayList<String>();
         // 25 context based responses
+        // transposition using array lists 
         in.add(new String[] {"depressed", "sad", "try", "tried"});
         out.add("Try being a rainbow in someone’s cloud.");
         in.add(new String[] {"impossible"});
@@ -89,7 +90,7 @@ public class Chatbot
         }
         
         if (changed == false){
-        if (statement.length() == 0)
+        if (statement.length() == 0) // response if nothing is inputted 
         {
             response = "Say something, please.";
         }
@@ -186,6 +187,12 @@ public class Chatbot
         return "All you need is the plan, the roadmap, and the courage to press on to " + restOfStatement + ".";
         
     }
+        /**
+     * Take a statement with "I can't<something>." and transform it into 
+     * "You must do the things you cannot do. You can <something>?"
+     * @param statement the user statement, assumed to contain "I can't"
+     * @return the transformed statement
+     */
     private String transformICantStatement(String statement)
     {
         statement = statement.trim();
