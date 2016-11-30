@@ -22,7 +22,7 @@ public class Chatbot
         String response = "";
         ArrayList<String[]> in = new ArrayList<String[]>();
         ArrayList<String> out = new ArrayList<String>();
-        
+        // 25 context based responses
         in.add(new String[] {"depressed", "sad", "try", "tried"});
         out.add("Try being a rainbow in someone’s cloud.");
         in.add(new String[] {"impossible"});
@@ -374,7 +374,7 @@ public class Chatbot
      * Pick a default response to use if nothing else fits.
      * @return a non-committal string
      */
-    private String getRandomResponse()
+    private String getRandomResponse() // generate random responses
     {
         final int NUMBER_OF_RESPONSES =17;
         double r = Math.random();
