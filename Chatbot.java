@@ -22,7 +22,7 @@ public class Chatbot
         String response = "";
         ArrayList<String[]> in = new ArrayList<String[]>();
         ArrayList<String> out = new ArrayList<String>();
-        // 25 context based responses
+        // Lines 27 - 80 hold the arraylists used with transposition to create the 25 context based responses. (2A)
         // transposition using array lists 
         in.add(new String[] {"depressed", "sad", "try", "tried"});
         out.add("Try being a rainbow in someone’s cloud.");
@@ -90,7 +90,7 @@ public class Chatbot
         }
         
         if (changed == false){
-        if (statement.length() == 0) // response if nothing is inputted 
+        if (statement.length() == 0) // response if nothing is inputted (4Ai)
         {
             response = "Say something, please.";
         }
@@ -211,6 +211,7 @@ public class Chatbot
      * @param statement the user statement, assumed to contain "I want to"
      * @return the transformed statement
      */
+     // (4Aiii)
     private String transformIWantToStatement(String statement)
     {
         //  Remove the final period, if there is one
@@ -336,6 +337,7 @@ public class Chatbot
         int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
         
         //  Refinement--make sure the goal isn't part of a word 
+        // Word boundary algorithm (3)
         while (psn >= 0) 
         {
             //  Find the string of length 1 before and after the word
@@ -381,7 +383,7 @@ public class Chatbot
      * Pick a default response to use if nothing else fits.
      * @return a non-committal string
      */
-    private String getRandomResponse() // generate random responses
+    private String getRandomResponse() // generate random responses (2B)
     {
         final int NUMBER_OF_RESPONSES =17;
         double r = Math.random();
